@@ -1,5 +1,6 @@
 package gui;
 
+import com.formdev.flatlaf.FlatDarkLaf;
 import controller.BorrowController;
 import controller.LibraryManager;
 import model.LibraryDatabase;
@@ -122,7 +123,12 @@ public class MainWindow extends JFrame {
         }
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new MainWindow().setVisible(true));
-    }
+ public static void main(String[] args) {
+
+    FlatDarkLaf.setup();
+
+    SwingUtilities.invokeLater(() ->
+        new MainWindow().setVisible(true)
+    );
+}
 }

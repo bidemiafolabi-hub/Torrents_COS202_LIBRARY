@@ -140,7 +140,7 @@ public class LibraryManager {
     }
 
     // Recursion requirement: overdue charge computation
-    // ₦50/day overdue (example)
+    // ₦50/day overdue 
     public long computeOverdueChargeRecursive(LocalDate dueDate, LocalDate today) {
         if (dueDate == null || !today.isAfter(dueDate)) return 0;
         return 50 + computeOverdueChargeRecursive(dueDate.plusDays(1), today);
